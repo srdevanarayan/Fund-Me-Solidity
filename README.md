@@ -1,66 +1,10 @@
-## Foundry
+# FundMe Smart Contract
+## Overview
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
-
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+The FundMe Smart Contract is a decentralized application (DApp) developed in Solidity, allowing users to contribute Ether (ETH) to a fund. The contract utilizes Chainlink's decentralized oracle network to fetch the conversion rate of Ether to USD, ensuring a minimum contribution threshold in USD.
+## Features
+- Users can send Ether to the fund through the fund function.
+- Only the contract owner can withdraw funds using the withdraw function.
+- Minimum contribution threshold: 5 USD.
+- Utilizes Chainlink Price Feeds for accurate conversion rates.
+- Written in Solidity for Ethereum blockchain.
